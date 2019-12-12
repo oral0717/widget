@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>wow.js动画实践</title>
+  <link rel="stylesheet" href="./animate.css">
+  <!-- wow.js动画素材依赖animate.css,动画浏览 https://daneden.github.io/animate.css/ -->
+</head>
+<style>
+ul,li{
+  text-align:center;
+  list-style: none;
+  padding:0;
+  margin:0;
+}
+</style>
+<body>
+  <ul>
+    <li>项目</li>
+    <li>项目</li>
+    <li class="wow slideInLeft">项目slideInLeft</li>
+    <li class="wow slideInRight">项目slideInRight</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li class="wow bounce" data-wow-duration="2s">项目bounce</li>
+    <li class="wow bounce" data-wow-delay="3s">项目bounce</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li class="wow shake" data-wow-duration="4s">项目shake</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li class="wow slideInRight" data-wow-iteration="3">项目slideInRight</li>
+    <li class="wow wobble" data-wow-duration="2s">项目wobble</li>
+    <li class="wow slideInRight" data-wow-offset="200">项目slideInRight</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li class="wow heartBeat" data-wow-duration="2s" data-wow-offset="100">项目heartBeat</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+  </ul>
+</body>
+<script>
+window.onload = function(){
+  // new WOW().init();
+  var wow = new WOW({
+    boxClass: 'wow', // 需要执行动画的元素的class，字符串，默认'wow'
+    animateClass: 'animated', // animation.css 动画的class，字符串,默认'animated'
+    offset: 0, // 距离可视区域多少开始执行动画,整数,默认0
+    mobile: true, // 是否在移动设备上执行动画，布尔值,默认true
+    live: true //异步加载的内容是否有效，布尔值,默认true
+  });
+  wow.init();
+}
+</script>
+<script src="./wow.min.js"></script>
+</html>
