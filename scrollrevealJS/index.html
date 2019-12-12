@@ -1,59 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>wow.js动画实践</title>
-  <link rel="stylesheet" href="./animate.css">
-  <!-- wow.js动画素材依赖animate.css,动画浏览 https://daneden.github.io/animate.css/ -->
+  <title>scrollreveal.js动画实践</title>
 </head>
 <style>
-ul,li{
-  text-align:center;
-  list-style: none;
-  padding:0;
-  margin:0;
-}
+  ul,
+  li {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 </style>
+
 <body>
   <ul>
     <li>项目</li>
     <li>项目</li>
-    <li class="wow slideInLeft">项目slideInLeft</li>
-    <li class="wow slideInRight">项目slideInRight</li>
+    <li class="test">项目动画</li>
     <li>项目</li>
     <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li class="wow bounce" data-wow-duration="2s">项目bounce</li>
-    <li class="wow bounce" data-wow-delay="3s">项目bounce</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li class="wow shake" data-wow-duration="4s">项目shake</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li>项目</li>
-    <li class="wow slideInRight" data-wow-iteration="3">项目slideInRight</li>
-    <li class="wow wobble" data-wow-duration="2s">项目wobble</li>
-    <li class="wow slideInRight" data-wow-offset="200">项目slideInRight</li>
+    <li class="test">项目动画</li>
+    <li class="test">项目动画</li>
+    <li class="test">项目动画</li>
     <li>项目</li>
     <li>项目</li>
     <li>项目</li>
@@ -82,7 +55,32 @@ ul,li{
     <li>项目</li>
     <li>项目</li>
     <li>项目</li>
-    <li class="wow heartBeat" data-wow-duration="2s" data-wow-offset="100">项目heartBeat</li>
+    <li>项目</li>
+    <li class="test">项目动画</li>
+    <li class="test">项目动画</li>
+    <li class="test">项目动画</li>
+
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
     <li>项目</li>
     <li>项目</li>
     <li>项目</li>
@@ -122,23 +120,52 @@ ul,li{
   </ul>
 </body>
 
-<script src="./wow.min.js"></script>
+<script src="./scrollreveal.js"></script>
 <script>
-window.onload = function(){
-  // new WOW().init();
-  var wow = new WOW({
-    boxClass: 'wow', // 需要执行动画的元素的class，字符串，默认'wow'
-    animateClass: 'animated', // animation.css 动画的class，字符串,默认'animated'
-    offset: 0, // 距离可视区域多少开始执行动画,整数,默认0
-    mobile: true, // 是否在移动设备上执行动画，布尔值,默认true
-    live: true //异步加载的内容是否有效，布尔值,默认true
-  });
-  wow.init();
-}
+  var config = {
+    reset: true, // 滚动鼠标时，动画开关(默认是false没有打开鼠标滚动的动画开关)
+    origin: 'bottom', // 动画开始的方向
+    duration: 2000, // 动画持续时间
+    delay: 0, // 延迟
+    rotate: {
+      x: 20,
+      y: 20,
+      z: 0
+    }, // 过度到0的初始角度
+    opacity: 0.2, // 初始透明度  (0.2到1的效果)
+    scale: 2, //缩放
+    easing: 'ease-in-out', //动画效果// 缓动'ease', 'ease-in-out'，'linear'...
+    // 回调函数
+    //当动画开始之前会被触发
+    beforeReveal: function (domEl) {
+      console.log('动画执行了');
+    },
+    //鼠标滚轮滚动之前会被触发
+    beforeReset: function (domEl) {
+      console.log('滚轮开始---');
+    },
+    //动画开始之后会被触发
+    afterReveal: function (domEl) {
+      console.log('动画结束了');
+    },
+    //滚轮滚动之后会被触发
+    afterReset: function (domEl) {
+      console.log('滚轮结束了');
+    }
+  };
 
-// readme:
-// wow.js实现页面入屏动画，仅执行一次
-// 兼容性，支持IE10及以上
-// wow.js动画素材依赖animate.css,动画浏览 https://daneden.github.io/animate.css/
+  //1.创建一个scrollReveal对象
+  window.sr = new ScrollReveal();
+  //2.调用scrollReveal里的reveal方法将scrollReveal内部的动画和css中的标签关联起来
+  sr.reveal('.test',config);
+  //参数一：跟html标签关联的类名
+  //参数二：动画配置
+
+
+  // readme:
+  // scrollReveal兼容移动端和PC端,多次执行
+  // 兼容性，支持IE10+  chrome  Firefox  Safari  opera
+  // scrollreveal.js动画不依赖animate.css及js库
 </script>
+
 </html>
