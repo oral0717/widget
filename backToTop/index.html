@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>回到顶部</title>
+</head>
+<style>
+  ul,
+  li {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .to-top {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    background: #ccc;
+    font-size: 16px;
+    width: 16px;
+    padding: 10px;
+    border-radius: 4px;
+    display:none;
+    cursor:pointer;
+  }
+</style>
+
+<body>
+  <ul>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+    <li>项目</li>
+  </ul>
+  <div id="toTop" class="to-top">回到顶部</div>
+</body>
+
+<script src="../source/js/jquery-2.2.4.js"></script>
+<script>
+  $(function () {
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 100) {
+        $("#toTop").fadeIn(1500);
+      } else {
+        $("#toTop").fadeOut(1500);
+      }
+    });
+
+    $('#toTop').on('click', function () {
+      $("html,body").animate({
+        scrollTop: 0
+      }, 500);
+    });
+  });
+</script>
+
+</html>
