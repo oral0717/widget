@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>flex demo</title>
+  <style>
+    *{box-sizing: border-box;}
+body{background:#000;/*display:flex;flex-wrap:wrap;*/}
+.title{color:#fff;}
+.box{display:flex;margin:16px;padding:4px;width:104px;height:104px;background:#f0f0f0;border-radius:10%;}
+.item{display:block;width:24px;height:24px;margin:4px;background:#000;border-radius:50%;}
+
+/*骰子布局start*/
+.box1{display:flex;justify-content:flex-start;}
+.box2{display:flex;justify-content:center;}
+.box3{display:flex;justify-content:flex-end;}
+.box4{display:flex;align-items:center;}
+.box5{display:flex;justify-content:center;align-items:center;}
+.box6{display:flex;justify-content:center;align-items:flex-end;}
+.box7{display:flex;justify-content:flex-end;align-items:flex-end;}
+
+.box8{display:flex;justify-content:space-between;}
+.box9{display:flex;flex-direction:column;justify-content:space-between;}
+.box10{display:flex;flex-direction:column;justify-content:space-between;align-items:center;}
+.box11{display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end;}
+.box12{display:flex;flex-direction:column;}
+.box12 .item:nth-child(2){align-self:center;}
+.box13{display:flex;justify-content:space-between;}
+.box13 .item:nth-child(2){align-self:flex-end;}
+
+.box14{display:flex;}
+.box14 .item:nth-child(2){align-self:center;}
+.box14 .item:nth-child(3){align-self:flex-end;}
+
+.box15{display:flex;flex-wrap:wrap;justify-content:flex-end;align-content:space-between;}
+.box16{display:flex;flex-wrap:wrap;align-content:space-between;}
+.box16 .column{display:flex;flex-basis: 100%;justify-content:space-between;}
+
+.box17{display:flex;flex-wrap:wrap;align-content:space-between;}
+.box17 .column{display:flex;flex-basis:100%;justify-content:space-between;}
+.box18{display:flex;flex-direction:column;flex-wrap:wrap;align-content:space-between;}
+.box18 .column{display:flex;flex-direction:column;flex-basis:100%;justify-content:space-between;}
+
+.box19{display:flex;flex-wrap:wrap;}
+.box19 .row{display:flex;flex-basis: 100%;}
+.box19 .row:nth-child(2){justify-content: center;}
+.box19 .row:nth-child(3){justify-content:space-between;}
+
+.box20{display:flex;flex-wrap:wrap;}
+.box20 .row{display:flex;}
+/*骰子布局end*/
+/* 网格布局start */
+
+
+/* 网格布局end */
+  </style>
+</head>
+<body>
+  <!-- 骰子布局start -->
+  <div>
+    <p class="title">1</p>
+  <div class="box box1">
+    <span class="item"></span>
+  </div>
+  <p class="title">2</p>
+  <div class="box box2">
+    <span class="item"></span>
+  </div>
+  <p class="title">3</p>
+  <div class="box box3">
+    <span class="item"></span>
+  </div>
+  <p class="title">4</p>
+  <div class="box box4">
+    <span class="item"></span>
+  </div>
+  <p class="title">5</p>
+  <div class="box box5">
+    <span class="item"></span>
+  </div>
+  <p class="title">6</p>
+  <div class="box box6">
+    <span class="item"></span>
+  </div>
+  <p class="title">7</p>
+  <div class="box box7">
+    <span class="item"></span>
+  </div>
+  <p class="title">8</p>
+  <div class="box box8">
+    <span class="item"></span>
+    <span class="item"></span>
+  </div>
+  <p class="title">9</p>
+  <div class="box box9">
+    <span class="item"></span>
+    <span class="item"></span>
+  </div>
+  <p class="title">10</p>
+  <div class="box box10">
+    <span class="item"></span>
+    <span class="item"></span>
+  </div>
+  <p class="title">11</p>
+  <div class="box box11">
+    <span class="item"></span>
+    <span class="item"></span>
+  </div>
+  <p class="title">12</p>
+  <div class="box box12">
+    <span class="item"></span>
+    <span class="item"></span>
+  </div>
+  <p class="title">13</p>
+  <div class="box box13">
+    <span class="item"></span>
+    <span class="item"></span>
+  </div>
+  <p class="title">14</p>
+  <div class="box box14">
+    <span class="item"></span>
+    <span class="item"></span>
+    <span class="item"></span>
+  </div>
+  <p class="title">15</p>
+  <div class="box box15">
+    <span class="item"></span>
+    <span class="item"></span>
+    <span class="item"></span>
+    <span class="item"></span>
+  </div>
+  <p class="title">16</p>
+  <div class="box box16">
+    <div class="column">
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+    <div class="column">
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+  </div>
+
+  <p class="title">17</p>
+  <div class="box box17">
+    <div class="column">
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+    <div class="column">
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+  </div>
+  <p class="title">18</p>
+  <div class="box box18">
+    <div class="column">
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+    <div class="column">
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+  </div>
+
+  <p class="title">19</p>
+  <div class="box box19">
+    <div class="row">
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+    <div class="row">
+      <span class="item"></span>
+    </div>
+    <div class="row">
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+  </div>
+  <p class="title">20</p>
+  <div class="box box20">
+    <div class="row">
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+    <div class="row">
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+    <div class="row">
+        <span class="item"></span>
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+  </div>
+</div>
+  <!-- 骰子布局end -->
+
+<!-- 网格布局start -->
+<style>
+.grid{background-color:#fff;padding:20px;}
+.grid-cell{margin:10px 0;display:flex;}
+.cell{flex:1;margin:0 10px;background-color:#ccc;}
+</style>
+<p class="title">网格布局</p>
+<div class="grid">
+  <div class="grid-cell"><span class="cell">1/2</span><span class="cell">1/2</span></div>
+  <div class="grid-cell"><span class="cell">1/3</span><span class="cell">1/3</span><span class="cell">1/3</span></div>
+  <div class="grid-cell"><span class="cell">1/4</span><span class="cell">1/4</span><span class="cell">1/4</span><span class="cell">1/4</span></div>
+  <div class="grid-cell">
+    <span class="cell">you will just miss out on the opportunity to brighten someone’s day with this message.</span>
+    <span class="cell">Please send this message to those people who meside of things when you are really down,to those who you want to let them know that you appreciate their friendship.And if you don’t, don’t worry,nothing bad will happen to you,you will just miss out on the opportunity to brighten someone’s day with this message.</span>
+  </div>
+</div>
+<!-- 网格布局end -->
+
+<!-- 百分比布局start -->
+<style>
+    .gridbfb{background-color:#fff;padding:20px;}
+    .grid-cellbfb{margin:10px 0;display:flex;}
+    .cellbfb{flex:1;margin:0 10px;background-color:#ccc;}
+    .cellbfb1{flex:0 0 50%;}
+    .cellbfb2{flex:0 0 33.3333333%;}
+    .cellbfb3{flex:0 0 25%;}
+</style>
+<p class="title">百分比布局</p>
+<div class="gridbfb">
+  <div class="grid-cellbfb"><span class="cellbfb cellbfb1">1/2</span><span class="cellbfb">auto</span><span class="cellbfb">auto</span></div>
+  <div class="grid-cellbfb"><span class="cellbfb">auto</span><span class="cellbfb cellbfb2">1/3</span></div>
+  <div class="grid-cellbfb"><span class="cellbfb cellbfb3">1/4</span><span class="cellbfb">auto</span><span class="cellbfb cellbfb2">1/3</span></div>
+</div>
+<!-- 百分比布局end -->
+
+
+<!-- 圣杯布局start -->
+<style>
+    .shengbei{height:500px;background-color:#fff;display:flex;flex-flow:column nowrap;}
+    .shengbei *{text-align:center;}
+    .sb-header{background:#aaa;flex:0 0 10vh;}
+    .sb-body{display:flex;flex-direction:row;flex:1;}
+    .sb-center{background:pink;flex:1;}
+    .sb-left{background:#ead;order:-1;flex:0 0 10%;}
+    .sb-right{background:#aed;flex:0 0 20%;}
+    .sb-footer{background:#aad;flex:0 0 10vh;}
+</style>
+<p class="title">圣杯布局</p>
+<div class="shengbei">
+  <div class="sb-header">header</div>
+  <div class="sb-body">
+    <div class="sb-center">center</div>
+    <div class="sb-left">left</div>
+    <div class="sb-right">right</div>
+  </div>
+  <div class="sb-footer">footer</div>
+</div>
+<!-- 圣杯布局end -->
+
+<!-- 固定底栏布局start -->
+<style>
+    .grid-fixed-footer{height:400px;background-color:#fff;display:flex;flex-flow:column nowrap;}
+    .grid-fixed-footer *{text-align:center;}
+    .fixed-footer-header{background:#aaa;flex:0 0 10vh;}
+    .fixed-footer-body{flex:1;}
+    .fixed-footer-footer{background:#aad;}
+</style>
+<p class="title">固定底栏布局</p>
+<div class="grid-fixed-footer">
+  <div class="fixed-footer-header">header</div>
+  <div class="fixed-footer-body">
+    body,高度不一定
+  </div>
+  <div class="fixed-footer-footer">footer</div>
+</div>
+<!-- 固定底栏布局end -->
+<!-- 流式布局start -->
+<style>
+    .grid-flow{height:400px;background-color:#fff;display:flex;flex-flow:row wrap;align-content: flex-start;}
+    .grid-flow *{text-align:center;box-sizing:border-box;}
+    .children{border:1px solid red;background:pink;flex:0 0 25%;height:50px;}
+</style>
+<p class="title">流式布局</p>
+<div class="grid-flow">
+  <span class="children"></span>
+  <span class="children"></span>
+  <span class="children"></span>
+  <span class="children"></span>
+  <span class="children"></span>
+  <span class="children"></span>
+  <span class="children"></span>
+  <span class="children"></span>
+  <span class="children"></span>
+  <span class="children"></span>
+</div>
+<!-- 流式布局end -->
+</body>
+</html>
